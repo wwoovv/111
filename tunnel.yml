@@ -1,0 +1,12 @@
+
+tunnel: b8642865-453f-4e21-a81c-1f25d1161ea3
+credentials-file: ./tunnel.json
+protocol: http2
+
+ingress:
+  - hostname: hug-argo.wwo.gay
+    service: http://localhost:8080
+    originRequest:
+      noTLSVerify: true
+  - service: http_status:404
+  
